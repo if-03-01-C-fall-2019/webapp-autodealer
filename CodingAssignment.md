@@ -19,10 +19,8 @@ Finally it might be possible to use Photoshop or a similar software to adapt ima
 ## Required Tasks
 0. Copy the files of your site as it was handed in for the coding assignment 2. Take care that you **do not** copy the .git directory, since it would mess up your repository.
 
-1. Make a concept, how to integrate the following css 3 features into your website.
-   - Transitions
-   - Animations
-   - Transformations
+1. Make a concept, how to integrate the following css 3 features into your website. Especially consider to include the features in a way such that they integrate smoothly in your site.
+   - One of the dynamic features like Transitions, Animations, or Transformations
    - Shadows
    - Linear and/or radial gradients
    - Rounded corners
