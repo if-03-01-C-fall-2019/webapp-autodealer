@@ -14,7 +14,7 @@ Feature:
 Obstacles:
 +trucks
 +cars
-+Lock
++Locks
 
 Desgin:
 +The background is a street
