@@ -17,5 +17,4 @@ Obstacles:
 Desgin:
 +The background is a street
 +The obstacles are all vertical and up or down by the road
-+Cars are there to stay evenly in the middle to avoid them
 +The figure is a car
