@@ -1,33 +1,25 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
-//Bilder:
-
-var bird = new Image();
+var car = new Image();
 var bg = new Image();
-var fg = new Image();
+var border = new Image();
 var pipeNorth = new Image();
 var pipeSouth = new Image();
 
-bird.src = "images/car.png";
+car.src = "images/car.png";
 bg.src = "images/hstraße.png";
-pipeNorth.src = "images/hin_3.png";
-pipeSouth.src = "images/hin_2.png";
+border.src = "";
+pipeNorth.src = "images/hin_5.jpg";
+pipeSouth.src = "images/hin_5.jpg";
 
 
-//Variablen
-
-var gap = 85;
+var gap = 150;
 var constant;
-
 var bX = 10;
 var bY = 150;
-
 var gravity = 1.5;
-
 var score = 0;
-
-// Movement
 
 document.addEventListener("keydown",moveUp);
 
@@ -35,16 +27,12 @@ function moveUp(){
     bY -= 25;
 }
 
-// Hinderniss Kordinaten
-
 var pipe = [];
 
 pipe[0] = {
     x : cvs.width,
     y : 0
 };
-
-// Bild wird dargestellt
 
 function draw(){
 
@@ -59,22 +47,25 @@ function draw(){
 
         pipe[i].x--;
 
-        if( pipe[i].x == 20 ){
+        if( pipe[i].x == 20){
             pipe.push({
                 x : cvs.width,
                 y : Math.floor(Math.random()*pipeNorth.height)-pipeNorth.height
             });
         }
 
-        // detect collision
+        if( bX + car.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY+car.height >= pipe[i].y+constant) || bY + car.height >=  cvs.height - border.height){
+            location.reload();
+        }
         if(pipe[i].x == 5){
             score++;
         }
+
+
     }
 
-    ctx.drawImage(fg,0,cvs.height - fg.height);
-
-    ctx.drawImage(bird,bX,bY);
+    ctx.drawImage(border,0,cvs.height - border.height);
+    ctx.drawImage(car,bX,bY);
 
     bY += gravity;
 
