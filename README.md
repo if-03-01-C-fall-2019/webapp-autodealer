@@ -12,14 +12,10 @@ Feature:
 +A 2 Future is that if you die you get a 2 chance (you need 200 points to buy it)
 
 Obstacles:
-+trucks
 +cars
-+Locks
 
 Desgin:
 +The background is a street
 +The obstacles are all vertical and up or down by the road
-+Trucks are there to do the higher and lower distances
 +Cars are there to stay evenly in the middle to avoid them
-+Blocks always come after a truck to go up or down immediately with a faster speed, otherwise you won't be able to avoid it
-+The figure is a car with wings
++The figure is a car
